@@ -37,6 +37,11 @@
 // @import '@ionic/angular/css/palettes/dark.system.css';
 
 // CUSTOM STYLES FOR IONIC
+ion-tab-button {
+  flex: none !important;
+  min-width: 56px !important;
+}
+
 ion-header {
   box-shadow: none !important;
 }
@@ -46,6 +51,7 @@ ion-tab-bar {
   padding-bottom: .5rem;
   background: none !important;
   --background: none !important;
+  gap: 2rem !important;
 }
 
 ion-item {

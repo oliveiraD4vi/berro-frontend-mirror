@@ -15,7 +15,7 @@ export class AppearancePage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.paletteToggle = !!(document.querySelector('.ion-palette-dark'));
+    this.paletteToggle = !!(window.document.querySelector('.ion-palette-dark'));
 
     // TOP BE IMPLEMENTED LATER
     // this.checkSystemPreference();

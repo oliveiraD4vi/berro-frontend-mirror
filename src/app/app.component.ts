@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { cartOutline, homeOutline, logoBitcoin, personCircle, personCircleOutline, roseOutline, sunny, sunnyOutline } from 'ionicons/icons';
+import { cartOutline, glasses, homeOutline, logoBitcoin, personCircle, personCircleOutline, roseOutline, sunny, sunnyOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,6 @@ import { cartOutline, homeOutline, logoBitcoin, personCircle, personCircleOutlin
 })
 export class AppComponent {
   constructor() {
-    addIcons({ personCircle, personCircleOutline, sunny, sunnyOutline, roseOutline, homeOutline, cartOutline, logoBitcoin });
+    addIcons({ personCircle, personCircleOutline, sunny, sunnyOutline, roseOutline, homeOutline, cartOutline, logoBitcoin, glasses });
   }
 }

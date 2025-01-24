@@ -7,26 +7,26 @@
 
 // PROJECT CUSTOM COLORS
 :root {
-	--ion-color-primary: #ffc409;
-	--ion-color-primary-rgb: 255,196,9;
+	--ion-color-primary: #F69002;
+	--ion-color-primary-rgb: 246,144,2;
 	--ion-color-primary-contrast: #000000;
 	--ion-color-primary-contrast-rgb: 0,0,0;
-	--ion-color-primary-shade: #e0ac08;
-	--ion-color-primary-tint: #ffca22;
+	--ion-color-primary-shade: #d87f02;
+	--ion-color-primary-tint: #f79b1b;
 
-	--ion-color-secondary: #ffca22;
-	--ion-color-secondary-rgb: 255,202,34;
+	--ion-color-secondary: #FF9C12;
+	--ion-color-secondary-rgb: 255,156,18;
 	--ion-color-secondary-contrast: #000000;
 	--ion-color-secondary-contrast-rgb: 0,0,0;
-	--ion-color-secondary-shade: #e0b21e;
-	--ion-color-secondary-tint: #ffcf38;
+	--ion-color-secondary-shade: #e08910;
+	--ion-color-secondary-tint: #ffa62a;
 
-	--ion-color-tertiary: #ffcf38;
-	--ion-color-tertiary-rgb: 255,207,56;
+	--ion-color-tertiary: #FFA412;
+	--ion-color-tertiary-rgb: 255,164,18;
 	--ion-color-tertiary-contrast: #000000;
 	--ion-color-tertiary-contrast-rgb: 0,0,0;
-	--ion-color-tertiary-shade: #e0b631;
-	--ion-color-tertiary-tint: #ffd44c;
+	--ion-color-tertiary-shade: #e09010;
+	--ion-color-tertiary-tint: #ffad2a;
 
 	--ion-color-success: #2dd55b;
 	--ion-color-success-rgb: 45,213,91;
@@ -70,6 +70,7 @@
 	--ion-color-dark-shade: #292929;
 	--ion-color-dark-tint: #444444;
 }
+// PROJECT CUSTOM COLORS
 
 /* This sets a different item border color for the default theme on ios and md */
 :root {

@@ -51,11 +51,17 @@ ion-tab-bar {
   padding-bottom: .5rem;
   background: none !important;
   --background: none !important;
-  gap: 2rem !important;
+  gap: .5rem !important;
 }
 
 ion-item {
   --transition: none;
+}
+
+ion-back-button > button.button-native > span.button-inner {
+  & > span.button-text {
+    display: none !important;
+  }
 }
 
 .header-ios ion-toolbar:last-of-type {

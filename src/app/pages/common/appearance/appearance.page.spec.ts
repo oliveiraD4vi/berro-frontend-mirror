@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppearancePage } from './appearance.page';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { AppearancePage } from "./appearance.page";
 
-describe('appearancePage', () => {
+describe("appearancePage", () => {
   let component: AppearancePage;
   let fixture: ComponentFixture<AppearancePage>;
 
@@ -11,7 +11,7 @@ describe('appearancePage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

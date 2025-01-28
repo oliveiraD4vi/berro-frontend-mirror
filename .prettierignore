@@ -1,0 +1,8 @@
+node_modules/
+build/
+.angular/
+.vscode/
+android/
+ios/
+www/
+dist/

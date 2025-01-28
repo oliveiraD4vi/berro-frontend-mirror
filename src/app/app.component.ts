@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
+import { Component } from "@angular/core";
+import { IonApp, IonRouterOutlet } from "@ionic/angular/standalone";
+import { addIcons } from "ionicons";
 import {
   cartOutline,
   documentTextOutline,
@@ -15,11 +15,11 @@ import {
   roseOutline,
   sunny,
   sunnyOutline,
-} from 'ionicons/icons';
+} from "ionicons/icons";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
+  selector: "app-root",
+  templateUrl: "app.component.html",
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
@@ -37,7 +37,7 @@ export class AppComponent {
       newspaperOutline,
       documentTextOutline,
       peopleOutline,
-      pricetagOutline
+      pricetagOutline,
     });
   }
 }

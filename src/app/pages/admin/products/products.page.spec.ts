@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProductsPage } from './products.page';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ProductsPage } from "./products.page";
 
-describe('ProductsPage', () => {
+describe("ProductsPage", () => {
   let component: ProductsPage;
   let fixture: ComponentFixture<ProductsPage>;
 
@@ -11,7 +11,7 @@ describe('ProductsPage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

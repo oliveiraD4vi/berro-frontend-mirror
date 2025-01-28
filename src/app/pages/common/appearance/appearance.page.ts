@@ -1,13 +1,44 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonList, IonContent, IonItem, IonListHeader, IonToggle, IonRange, IonIcon, IonLabel, IonText } from "@ionic/angular/standalone";
+import { Component, OnInit } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonList,
+  IonContent,
+  IonItem,
+  IonListHeader,
+  IonToggle,
+  IonRange,
+  IonIcon,
+  IonLabel,
+  IonText,
+} from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-appearance',
-  templateUrl: './appearance.page.html',
-  styleUrls: ['./appearance.page.scss'],
+  selector: "app-appearance",
+  templateUrl: "./appearance.page.html",
+  styleUrls: ["./appearance.page.scss"],
   standalone: true,
-  imports: [FormsModule, IonText, IonLabel, IonIcon, IonRange, IonToggle, IonListHeader, IonItem, IonContent, IonList, IonTitle, IonBackButton, IonButtons, IonToolbar, IonHeader]
+  imports: [
+    FormsModule,
+    IonText,
+    IonLabel,
+    IonIcon,
+    IonRange,
+    IonToggle,
+    IonListHeader,
+    IonItem,
+    IonContent,
+    IonList,
+    IonTitle,
+    IonBackButton,
+    IonButtons,
+    IonToolbar,
+    IonHeader,
+  ],
 })
 export class AppearancePage implements OnInit {
   paletteToggle = false;
@@ -15,18 +46,20 @@ export class AppearancePage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.paletteToggle = !!(window.document.querySelector('.ion-palette-dark'));
+    this.paletteToggle = !!window.document.querySelector(".ion-palette-dark");
 
     // TOP BE IMPLEMENTED LATER
     // this.checkSystemPreference();
   }
 
   checkSystemPreference() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
     this.initializeDarkPalette(prefersDark.matches);
 
-    prefersDark.addEventListener('change', (mediaQuery) => this.initializeDarkPalette(mediaQuery.matches));
+    prefersDark.addEventListener("change", (mediaQuery) =>
+      this.initializeDarkPalette(mediaQuery.matches)
+    );
   }
 
   initializeDarkPalette(isDark: boolean) {
@@ -39,6 +72,6 @@ export class AppearancePage implements OnInit {
   }
 
   toggleDarkPalette(shouldAdd: boolean) {
-    document.documentElement.classList.toggle('ion-palette-dark', shouldAdd);
+    document.documentElement.classList.toggle("ion-palette-dark", shouldAdd);
   }
 }

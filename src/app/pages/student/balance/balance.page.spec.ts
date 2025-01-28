@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BalancePage } from './balance.page';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { BalancePage } from "./balance.page";
 
-describe('BalancePage', () => {
+describe("BalancePage", () => {
   let component: BalancePage;
   let fixture: ComponentFixture<BalancePage>;
 
@@ -11,7 +11,7 @@ describe('BalancePage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

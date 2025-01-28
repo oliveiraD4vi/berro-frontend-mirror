@@ -2,7 +2,9 @@ import { Component } from "@angular/core";
 import { IonApp, IonRouterOutlet } from "@ionic/angular/standalone";
 import { addIcons } from "ionicons";
 import {
+  attachOutline,
   cartOutline,
+  documentAttachOutline,
   documentTextOutline,
   glasses,
   homeOutline,
@@ -13,8 +15,10 @@ import {
   personCircleOutline,
   pricetagOutline,
   roseOutline,
+  settingsOutline,
   sunny,
   sunnyOutline,
+  walletOutline,
 } from "ionicons/icons";
 
 @Component({
@@ -38,6 +42,10 @@ export class AppComponent {
       documentTextOutline,
       peopleOutline,
       pricetagOutline,
+      walletOutline,
+      settingsOutline,
+      attachOutline,
+      documentAttachOutline
     });
   }
 }

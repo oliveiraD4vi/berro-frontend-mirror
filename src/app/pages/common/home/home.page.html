@@ -3,11 +3,15 @@
     <ion-title>Olá, Fulano!</ion-title>
 
     <ion-buttons slot="end">
+      <app-balance-visibility></app-balance-visibility>
+
       <app-appearance-button></app-appearance-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="page-container"></div>
+  <div class="page-container">
+    <!-- <app-balance-card></app-balance-card> -->
+  </div>
 </ion-content>

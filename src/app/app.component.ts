@@ -6,6 +6,8 @@ import {
   cartOutline,
   documentAttachOutline,
   documentTextOutline,
+  eyeOffOutline,
+  eyeOutline,
   glasses,
   homeOutline,
   logoBitcoin,
@@ -45,7 +47,9 @@ export class AppComponent {
       walletOutline,
       settingsOutline,
       attachOutline,
-      documentAttachOutline
+      documentAttachOutline,
+      eyeOutline,
+      eyeOffOutline
     });
   }
 }

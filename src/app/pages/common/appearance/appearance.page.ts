@@ -1,5 +1,21 @@
 import { Component, OnInit } from "@angular/core";
-import { SharedModule } from "src/app/shared/shared.module";
+import { FormsModule } from "@angular/forms";
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonList,
+  IonContent,
+  IonItem,
+  IonListHeader,
+  IonToggle,
+  IonRange,
+  IonIcon,
+  IonLabel,
+  IonText,
+} from "@ionic/angular/standalone";
 
 @Component({
   selector: "app-appearance",
@@ -7,7 +23,21 @@ import { SharedModule } from "src/app/shared/shared.module";
   styleUrls: ["./appearance.page.scss"],
   standalone: true,
   imports: [
-    SharedModule
+    FormsModule,
+    IonText,
+    IonLabel,
+    IonIcon,
+    IonRange,
+    IonToggle,
+    IonListHeader,
+    IonItem,
+    IonContent,
+    IonList,
+    IonTitle,
+    IonBackButton,
+    IonButtons,
+    IonToolbar,
+    IonHeader,
   ],
 })
 export class AppearancePage implements OnInit {

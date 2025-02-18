@@ -1,5 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { SharedModule } from "src/app/shared/shared.module";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButtons,
+} from "@ionic/angular/standalone";
+import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
 
 @Component({
   selector: "app-profile",
@@ -7,7 +16,14 @@ import { SharedModule } from "src/app/shared/shared.module";
   styleUrls: ["./profile.page.scss"],
   standalone: true,
   imports: [
-    SharedModule
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    AppearanceButtonComponent,
   ],
 })
 export class ProfilePage implements OnInit {

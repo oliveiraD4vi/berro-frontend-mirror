@@ -1,11 +1,12 @@
+import { IonButton } from '@ionic/angular/standalone';
+import { IonIcon } from '@ionic/angular/standalone';
 import { Component } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
   selector: 'app-balance-visibility',
   templateUrl: './balance-visibility.component.html',
   styleUrls: ['./balance-visibility.component.scss'],
-  imports: [SharedModule]
+  imports: [IonIcon, IonButton]
 })
 export class BalanceVisibilityComponent {
   isVisible: boolean = false;

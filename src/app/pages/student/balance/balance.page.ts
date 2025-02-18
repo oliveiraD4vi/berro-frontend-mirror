@@ -1,5 +1,16 @@
 import { Component, OnInit } from "@angular/core";
-import { SharedModule } from "src/app/shared/shared.module";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButtons,
+} from "@ionic/angular/standalone";
+import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
+import { BalanceCardComponent } from "../../../components/balance-card/balance-card.component";
+import { BalanceVisibilityComponent } from "../../../components/balance-visibility/balance-visibility.component";
 
 @Component({
   selector: "app-balance",
@@ -7,8 +18,17 @@ import { SharedModule } from "src/app/shared/shared.module";
   styleUrls: ["./balance.page.scss"],
   standalone: true,
   imports: [
-    SharedModule
-  ],
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    AppearanceButtonComponent,
+    BalanceCardComponent,
+    BalanceVisibilityComponent
+],
 })
 export class BalancePage implements OnInit {
   constructor() {}

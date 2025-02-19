@@ -2,8 +2,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable, REQUEST } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { StateService } from '../state/state.service';
 import { StorageKeys, URL } from 'src/app/utils/constants';
+import { LocalStorageService } from '../storage/local-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class BaseService {
   constructor(
     @Inject(REQUEST) private request: Request,
     private http: HttpClient,
-    private stateService: StateService
+    private storage: LocalStorageService
   ) {}
 
   get BASE_URL() {
@@ -20,25 +20,19 @@ export class BaseService {
   }
 
   getToken() {
-    let token;
+    const token = this.storage.getItem(StorageKeys.TOKEN);
 
-    const tokenString = localStorage.getItem(StorageKeys.TOKEN);
-
-    if (tokenString) {
-      token = JSON.parse(tokenString);
-    }
-
-    if (token) {
-      return {
-        headers: new HttpHeaders()
-          .set("Authorization", `Bearer ${token}`)
-          .set("Content-Type", "application/json;charset=UTF-8")
-          .set("x-tenant-id", URL.TENANT()),
-      };
-    } else {
+    if (!token) {
       return {
         headers: new HttpHeaders().set("x-tenant-id", URL.TENANT()),
-      };
+      }
+    }
+
+    return {
+      headers: new HttpHeaders()
+        .set("Authorization", `Bearer ${token}`)
+        .set("Content-Type", "application/json;charset=UTF-8")
+        .set("x-tenant-id", URL.TENANT()),
     }
   }
 

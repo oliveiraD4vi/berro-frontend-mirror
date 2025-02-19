@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, effect } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import {
   IonHeader,
@@ -11,6 +11,7 @@ import {
   IonItem,
   IonToggle,
 } from "@ionic/angular/standalone";
+import { AppearanceService } from "src/app/services/appearance/appearance.service";
 
 @Component({
   selector: "app-appearance",
@@ -30,38 +31,16 @@ import {
     IonHeader,
   ],
 })
-export class AppearancePage implements OnInit {
+export class AppearancePage {
   paletteToggle = false;
 
-  constructor() {}
-
-  ngOnInit() {
-    this.paletteToggle = !!window.document.querySelector(".ion-palette-dark");
-
-    // TOP BE IMPLEMENTED LATER
-    // this.checkSystemPreference();
-  }
-
-  checkSystemPreference() {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-    this.initializeDarkPalette(prefersDark.matches);
-
-    prefersDark.addEventListener("change", (mediaQuery) =>
-      this.initializeDarkPalette(mediaQuery.matches)
-    );
-  }
-
-  initializeDarkPalette(isDark: boolean) {
-    this.paletteToggle = isDark;
-    this.toggleDarkPalette(isDark);
+  constructor(private appearance: AppearanceService) {
+    effect(() => {
+      this.paletteToggle = this.appearance.$paletteToggle();
+    });
   }
 
   toggleChange(event: CustomEvent) {
-    this.toggleDarkPalette(event.detail.checked);
-  }
-
-  toggleDarkPalette(shouldAdd: boolean) {
-    document.documentElement.classList.toggle("ion-palette-dark", shouldAdd);
+    this.appearance.toggleChange(event);
   }
 }

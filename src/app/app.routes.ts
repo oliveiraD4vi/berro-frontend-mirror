@@ -14,7 +14,7 @@ export const routes: Routes = [
   {
     path: "appearance",
     loadComponent: () =>
-      import("./pages/tabs/common/appearance/appearance.page").then(
+      import("./pages/appearance/appearance.page").then(
         (m) => m.AppearancePage
       ),
   },

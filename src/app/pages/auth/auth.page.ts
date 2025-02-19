@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EnvironmentInjector, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonRouterOutlet } from '@ionic/angular/standalone';
@@ -11,5 +11,7 @@ import { IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonRouterOutlet, CommonModule, FormsModule]
 })
 export class AuthPage {
+  public environmentInjector = inject(EnvironmentInjector);
+
   constructor() {}
 }

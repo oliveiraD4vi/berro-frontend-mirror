@@ -23,7 +23,8 @@ export class URL {
     return "ifce-taua";
   }
 
-  public static SET_TENANT(): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public static SET_TENANT(tenant: string | null): void {
     // HAVE TO SAVE THE CORRECT TENANT FROM STORAGE
   }
 }

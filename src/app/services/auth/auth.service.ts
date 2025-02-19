@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { LocalStorageService } from '../storage/local-storage.service';
 import { Router } from '@angular/router';
-import { StorageKeys } from 'src/app/utils/constants';
+import { StorageKeys, URL } from 'src/app/utils/constants';
 import { User } from '../../@types/auth/auth';
 
 @Injectable({
@@ -36,6 +36,7 @@ export class AuthService {
     this.storage.removeItem(StorageKeys.TOKEN);
     this.storage.removeItem(StorageKeys.CART);
     this.setUser(null);
+    URL.SET_TENANT(null);
     this.router.navigate(["/login"]);
   }
 
@@ -45,6 +46,7 @@ export class AuthService {
     this.storage.setItem(StorageKeys.USER, data);
     this.storage.setItem(StorageKeys.TOKEN, token);
     this.setUser(data);
+    URL.SET_TENANT(data.tenant);
     this.router.navigate(["/"]);
   }
 }

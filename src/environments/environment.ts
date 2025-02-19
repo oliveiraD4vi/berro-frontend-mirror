@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  baseUrl: "berro.com.br",
+  protocol: "https://",
+  port: 4200,
 };
 
 /*

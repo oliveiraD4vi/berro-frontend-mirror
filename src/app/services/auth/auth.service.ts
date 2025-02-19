@@ -1,0 +1,50 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { LocalStorageService } from '../storage/local-storage.service';
+import { Router } from '@angular/router';
+import { StorageKeys } from 'src/app/utils/constants';
+import { User } from '../../@types/auth/auth';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  isLogged: boolean = false;
+
+  // STARTS USER DATA
+  private userSubject: BehaviorSubject<User | null> =
+    new BehaviorSubject<User | null>(null);
+  user$ = this.userSubject.asObservable();
+
+  setUser(data: User | null) {
+    this.isLogged = Boolean(data);
+    this.userSubject.next(data);
+  }
+  // END USER DATA
+
+  constructor(
+    private storage: LocalStorageService,
+    private router: Router
+  ) {
+    const data: User | null = this.storage.getItem(StorageKeys.USER);
+
+    this.setUser(data);
+  }
+
+  logout() {
+    this.storage.removeItem(StorageKeys.USER);
+    this.storage.removeItem(StorageKeys.TOKEN);
+    this.storage.removeItem(StorageKeys.CART);
+    this.setUser(null);
+    this.router.navigate(["/login"]);
+  }
+
+  saveData(data: User) {
+    const { token } = data;
+
+    this.storage.setItem(StorageKeys.USER, data);
+    this.storage.setItem(StorageKeys.TOKEN, token);
+    this.setUser(data);
+    this.router.navigate(["/"]);
+  }
+}

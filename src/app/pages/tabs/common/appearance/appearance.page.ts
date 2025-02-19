@@ -9,12 +9,7 @@ import {
   IonList,
   IonContent,
   IonItem,
-  IonListHeader,
   IonToggle,
-  IonRange,
-  IonIcon,
-  IonLabel,
-  IonText,
 } from "@ionic/angular/standalone";
 
 @Component({
@@ -24,12 +19,7 @@ import {
   standalone: true,
   imports: [
     FormsModule,
-    IonText,
-    IonLabel,
-    IonIcon,
-    IonRange,
     IonToggle,
-    IonListHeader,
     IonItem,
     IonContent,
     IonList,

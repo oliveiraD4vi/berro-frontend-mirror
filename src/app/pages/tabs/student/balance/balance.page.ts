@@ -9,8 +9,8 @@ import {
   IonButtons,
 } from "@ionic/angular/standalone";
 import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
-import { BalanceCardComponent } from "../../../components/balance-card/balance-card.component";
-import { BalanceVisibilityComponent } from "../../../components/balance-visibility/balance-visibility.component";
+import { BalanceCardComponent } from "../../../../components/balance-card/balance-card.component";
+import { BalanceVisibilityComponent } from "../../../../components/balance-visibility/balance-visibility.component";
 
 @Component({
   selector: "app-balance",

@@ -11,16 +11,16 @@ export const routes: Routes = [
         loadComponent: () =>
           import("./login/login.page").then((m) => m.LoginPage),
       },
-      // {
-      //   path: "register",
-      //   loadComponent: () =>
-      //     import("").then((m) => m.),
-      // },
-      // {
-      //   path: "first-access",
-      //   loadComponent: () =>
-      //     import("").then((m) => m.),
-      // },
+      {
+        path: "register",
+        loadComponent: () =>
+          import("./register/register.page").then((m) => m.RegisterPage),
+      },
+      {
+        path: "steps",
+        loadComponent: () =>
+          import("./steps/steps.page").then((m) => m.StepsPage),
+      },
       {
         path: "",
         redirectTo: "/auth/login",
@@ -32,9 +32,5 @@ export const routes: Routes = [
     path: "",
     redirectTo: "/auth/login",
     pathMatch: "full",
-  },
-  {
-    path: 'login',
-    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
-  },
+  }
 ];

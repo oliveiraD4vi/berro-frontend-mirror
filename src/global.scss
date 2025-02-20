@@ -75,6 +75,13 @@ ion-back-button > button.button-native > span.button-inner {
 
 ion-button {
   margin: 0 !important;
+  text-transform: none;
+  --border-radius: 5rem;
+}
+
+ion-footer {
+  box-shadow: none !important;
+  padding: .5rem;
 }
 
 .header-ios ion-toolbar:last-of-type {
@@ -83,7 +90,29 @@ ion-button {
 // CUSTOM STYLES FOR IONIC
 
 .page-container {
-  display: block;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   padding: 0 1.25rem;
+  position: relative;
+
+  & > ion-img.logo {
+    height: 150px;
+    align-self: center;
+  }
+}
+
+.primary-background {
+  background-color: var(--ion-custom-background);
+
+  &.b-circle {
+    position: absolute;
+    width: 150%;
+    height: 30%;
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 }

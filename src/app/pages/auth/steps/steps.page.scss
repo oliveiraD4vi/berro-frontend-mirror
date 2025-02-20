@@ -1,0 +1,16 @@
+.page-container.steps {
+  .content {
+    align-self: center;
+  }
+}
+
+ion-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: .75rem;
+  }
+}

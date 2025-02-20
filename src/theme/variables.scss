@@ -16,7 +16,7 @@
 
   --ion-color-secondary: #fafafa;
   --ion-color-secondary-rgb: 255, 156, 18;
-  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast: #ff9c12;
   --ion-color-secondary-contrast-rgb: 0, 0, 0;
   --ion-color-secondary-shade: #e2e2e2;
   --ion-color-secondary-tint: #dfdfdf;
@@ -69,6 +69,8 @@
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #292929;
   --ion-color-dark-tint: #444444;
+
+  --ion-custom-background: var(--ion-color-primary);
 }
 // PROJECT CUSTOM COLORS
 
@@ -95,4 +97,5 @@
 .ion-palette-dark.ios,
 .ion-palette-dark.md {
   --ion-item-background: #1c1c1d;
+  --ion-custom-background: #7a7a7a;
 }

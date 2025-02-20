@@ -5,9 +5,8 @@ import {
   IonContent,
   IonHeader,
   IonToolbar,
-  IonButtons,
-} from "@ionic/angular/standalone";
-import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
+  IonImg, IonFooter, IonButton, IonText } from "@ionic/angular/standalone";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-steps",
@@ -15,13 +14,14 @@ import { AppearanceButtonComponent } from "src/app/components/appearance-button/
   styleUrls: ["./steps.page.scss"],
   standalone: true,
   imports: [
-    IonButtons,
+    IonText, IonButton, IonFooter,
+    IonImg,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
-    AppearanceButtonComponent,
+    RouterLink
   ],
 })
 export class StepsPage {

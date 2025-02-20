@@ -5,9 +5,7 @@ import {
   IonContent,
   IonHeader,
   IonToolbar,
-  IonButtons,
 } from "@ionic/angular/standalone";
-import { AppearanceButtonComponent } from "../../../components/appearance-button/appearance-button.component";
 
 @Component({
   selector: "app-recover",
@@ -15,13 +13,11 @@ import { AppearanceButtonComponent } from "../../../components/appearance-button
   styleUrls: ["./recover.page.scss"],
   standalone: true,
   imports: [
-    IonButtons,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
-    AppearanceButtonComponent,
   ],
 })
 export class RecoverPage implements OnInit {

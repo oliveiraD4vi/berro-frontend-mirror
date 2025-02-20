@@ -8,8 +8,10 @@ import {
   IonTitle,
   IonList,
   IonContent,
-  IonItem,
-  IonToggle, IonButton } from "@ionic/angular/standalone";
+  // IonItem,
+  // IonToggle,
+  IonButton
+} from "@ionic/angular/standalone";
 import { AppearanceService } from "src/app/services/appearance/appearance.service";
 import { AuthService } from "src/app/services/auth/auth.service";
 
@@ -20,8 +22,8 @@ import { AuthService } from "src/app/services/auth/auth.service";
   standalone: true,
   imports: [IonButton,
     FormsModule,
-    IonToggle,
-    IonItem,
+    // IonToggle,
+    // IonItem,
     IonContent,
     IonList,
     IonTitle,

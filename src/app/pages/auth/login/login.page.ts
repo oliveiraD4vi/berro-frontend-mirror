@@ -1,14 +1,11 @@
 import { AuthService } from "src/app/services/auth/auth.service";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
+import { FormBuilder, FormGroup, FormsModule, Validators } from "@angular/forms";
 import {
   IonContent,
   IonHeader,
-  IonToolbar,
-  IonButtons,
-} from "@ionic/angular/standalone";
-import { AppearanceButtonComponent } from "../../../components/appearance-button/appearance-button.component";
+  IonToolbar, IonImg, IonButtons, IonBackButton } from "@ionic/angular/standalone";
 import { Roles } from "src/app/utils/constants";
 
 @Component({
@@ -17,19 +14,36 @@ import { Roles } from "src/app/utils/constants";
   styleUrls: ["./login.page.scss"],
   standalone: true,
   imports: [
-    IonButtons,
+    IonBackButton, IonButtons, IonImg,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
-    AppearanceButtonComponent,
   ],
 })
 export class LoginPage {
+  fb = inject(FormBuilder);
+
+  loginForm: FormGroup = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', Validators.required],
+    rememberPassword: [false],
+  });
+
   roles = Roles;
 
   constructor(private authService: AuthService) {}
+
+  onSubmit(e: Event) {
+    e.preventDefault();
+
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    this.login(this.roles.ALUMN);
+  }
 
   login(role: string) {
     this.authService.saveData({

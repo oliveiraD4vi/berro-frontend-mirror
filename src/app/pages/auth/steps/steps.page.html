@@ -1,11 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <app-appearance-button></app-appearance-button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-toolbar></ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="page-container"></div>
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <div class="page-container steps">
+    <ion-img class="logo" src="../../../../assets/logo/logo.svg" alt="LOGO"></ion-img>
+
+    <div class="content"></div>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-button color="secondary" [routerLink]="['/auth/login']">
+    Está pronto? Vamos lá
+  </ion-button>
+
+  <p>
+    <ion-text>Você deve possuir um cadastro para prosseguir</ion-text>
+  </p>
+</ion-footer>
+
+<div class="b-circle primary-background"></div>

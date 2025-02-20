@@ -4,10 +4,8 @@ import { FormsModule } from "@angular/forms";
 import {
   IonContent,
   IonHeader,
-  IonToolbar,
-  IonButtons
+  IonToolbar
 } from "@ionic/angular/standalone";
-import { AppearanceButtonComponent } from "../../../components/appearance-button/appearance-button.component";
 
 @Component({
   selector: "app-register",
@@ -15,13 +13,11 @@ import { AppearanceButtonComponent } from "../../../components/appearance-button
   styleUrls: ["./register.page.scss"],
   standalone: true,
   imports: [
-    IonButtons,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
-    AppearanceButtonComponent,
   ],
 })
 export class RegisterPage {

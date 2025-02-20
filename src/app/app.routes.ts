@@ -21,6 +21,7 @@ export const routes: Routes = [
       import("./pages/appearance/appearance.page").then(
         (m) => m.AppearancePage
       ),
+    canActivate: [isNotLoggedGuard],
   },
   {
     path: "**",

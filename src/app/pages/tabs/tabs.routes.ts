@@ -17,11 +17,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import("./common/profile/profile.page").then((m) => m.ProfilePage),
       },
-      // {
-      //   path: "balance",
-      //   loadComponent: () =>
-      //     import("../student/balance/balance.page").then((m) => m.BalancePage),
-      // },
       {
         path: "cart",
         loadComponent: () =>
@@ -53,14 +48,14 @@ export const routes: Routes = [
         canActivate: [roleGuard]
       },
       {
-        path: "**",
+        path: "",
         redirectTo: "/tabs/home",
         pathMatch: "full",
       },
     ],
   },
   {
-    path: "**",
+    path: "",
     redirectTo: "/tabs/home",
     pathMatch: "full",
   },

@@ -11,11 +11,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import("./login/login.page").then((m) => m.LoginPage),
       },
-      // {
-      //   path: "register",
-      //   loadComponent: () =>
-      //     import("./register/register.page").then((m) => m.RegisterPage),
-      // },
       {
         path: "steps",
         loadComponent: () =>
@@ -27,14 +22,14 @@ export const routes: Routes = [
           import("./recover/recover.page").then((m) => m.RecoverPage),
       },
       {
-        path: "**",
+        path: "",
         redirectTo: "/auth/steps",
         pathMatch: "full",
       },
     ],
   },
   {
-    path: "**",
+    path: "",
     redirectTo: "/auth/steps",
     pathMatch: "full",
   },

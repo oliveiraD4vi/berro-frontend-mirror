@@ -53,14 +53,14 @@ export const routes: Routes = [
         canActivate: [roleGuard]
       },
       {
-        path: "",
+        path: "**",
         redirectTo: "/tabs/home",
         pathMatch: "full",
       },
     ],
   },
   {
-    path: "",
+    path: "**",
     redirectTo: "/tabs/home",
     pathMatch: "full",
   },

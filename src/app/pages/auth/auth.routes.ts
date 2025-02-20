@@ -11,26 +11,31 @@ export const routes: Routes = [
         loadComponent: () =>
           import("./login/login.page").then((m) => m.LoginPage),
       },
-      {
-        path: "register",
-        loadComponent: () =>
-          import("./register/register.page").then((m) => m.RegisterPage),
-      },
+      // {
+      //   path: "register",
+      //   loadComponent: () =>
+      //     import("./register/register.page").then((m) => m.RegisterPage),
+      // },
       {
         path: "steps",
         loadComponent: () =>
           import("./steps/steps.page").then((m) => m.StepsPage),
       },
       {
-        path: "",
-        redirectTo: "/auth/login",
+        path: "recover",
+        loadComponent: () =>
+          import("./recover/recover.page").then((m) => m.RecoverPage),
+      },
+      {
+        path: "**",
+        redirectTo: "/auth/steps",
         pathMatch: "full",
       },
     ],
   },
   {
-    path: "",
-    redirectTo: "/auth/login",
+    path: "**",
+    redirectTo: "/auth/steps",
     pathMatch: "full",
-  }
+  },
 ];

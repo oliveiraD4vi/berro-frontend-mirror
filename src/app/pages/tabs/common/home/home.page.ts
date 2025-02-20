@@ -1,5 +1,5 @@
 import { IonButtons } from "@ionic/angular/standalone";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import {
   IonHeader,
   IonToolbar,
@@ -7,8 +7,8 @@ import {
   IonContent,
 } from "@ionic/angular/standalone";
 import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
-import { BalanceCardComponent } from "src/app/components/balance-card/balance-card.component";
 import { BalanceVisibilityComponent } from "../../../../components/balance-visibility/balance-visibility.component";
+import { AuthService } from "src/app/services/auth/auth.service";
 
 @Component({
   selector: "app-home",
@@ -21,10 +21,11 @@ import { BalanceVisibilityComponent } from "../../../../components/balance-visib
     IonContent,
     AppearanceButtonComponent,
     IonButtons,
-    BalanceCardComponent,
     BalanceVisibilityComponent
 ],
 })
 export class HomePage {
+  auth = inject(AuthService);
+
   constructor() {}
 }

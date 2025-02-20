@@ -9,6 +9,7 @@ export type User = {
   email: string;
   token: string;
   tenant: string;
+  role: string;
 };
 
 export type UserRegister = {

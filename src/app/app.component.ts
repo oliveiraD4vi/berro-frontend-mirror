@@ -31,7 +31,7 @@ import { AppearanceService } from "./services/appearance/appearance.service";
 })
 export class AppComponent {
   constructor(private appearance: AppearanceService) {
-    this.appearance.init();
+    this.appearance.initTheme();
 
     addIcons({
       personCircle,

@@ -41,6 +41,12 @@ export class Theme {
   public static DARK = "DARK";
 }
 
+export class Roles {
+  public static ALUMN = "ALUMN";
+  public static ADMIN = "ADMIN";
+  public static GUSER = "GUSER";
+}
+
 // export class Configs {
 //   // CONFIGS
 // }

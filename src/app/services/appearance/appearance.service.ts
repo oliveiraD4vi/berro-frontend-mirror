@@ -10,7 +10,7 @@ export class AppearanceService {
 
   constructor(private storage: LocalStorageService) {}
 
-  public init() {
+  public initTheme() {
     const theme = this.storage.getItem(StorageKeys.THEME);
 
     if (!theme) {

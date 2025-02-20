@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Olá, Fulano!</ion-title>
+    <ion-title>Olá, {{ auth.name }}!</ion-title>
 
     <ion-buttons slot="end">
       <app-balance-visibility></app-balance-visibility>
@@ -11,7 +11,5 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="page-container">
-    <app-balance-card></app-balance-card>
-  </div>
+  <div class="page-container"></div>
 </ion-content>

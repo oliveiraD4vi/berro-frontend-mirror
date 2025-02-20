@@ -7,10 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="page-container">
-    Login
-
-    <ion-button [routerLink]="['/users/tabs/home']">
+  <div class="page-container login">
+    <!-- <ion-button [routerLink]="['/users/tabs/home']">
       Go to tabs
     </ion-button>
 
@@ -20,6 +18,18 @@
 
     <ion-button [routerLink]="['/auth/steps']">
       Go to Steps
+    </ion-button> -->
+
+    <ion-button color="primary" (click)="login(roles.ALUMN)">
+      Entrar como Aluno
+    </ion-button>
+
+    <ion-button color="secondary" (click)="login(roles.ADMIN)">
+      Entrar como Admin
+    </ion-button>
+
+    <ion-button color="secondary" (click)="login(roles.GUSER)">
+      Entrar como Guser
     </ion-button>
   </div>
 </ion-content>

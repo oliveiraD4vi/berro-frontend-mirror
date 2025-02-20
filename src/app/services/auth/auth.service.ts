@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { LocalStorageService } from '../storage/local-storage.service';
 import { Router } from '@angular/router';
-import { StorageKeys, URL } from 'src/app/utils/constants';
+import { Roles, StorageKeys, URL } from 'src/app/utils/constants';
 import { User } from '../../@types/auth/auth';
 
 @Injectable({
@@ -10,6 +10,8 @@ import { User } from '../../@types/auth/auth';
 })
 export class AuthService {
   isLogged: boolean = false;
+  role: string = Roles.ALUMN;
+  name: string = '';
 
   // STARTS USER DATA
   private userSubject: BehaviorSubject<User | null> =
@@ -18,6 +20,12 @@ export class AuthService {
 
   setUser(data: User | null) {
     this.isLogged = Boolean(data);
+
+    if (data?.role) {
+      this.role = data.role;
+      this.name = data.name;
+    }
+
     this.userSubject.next(data);
   }
   // END USER DATA
@@ -47,6 +55,6 @@ export class AuthService {
     this.storage.setItem(StorageKeys.TOKEN, token);
     this.setUser(data);
     URL.SET_TENANT(data.tenant);
-    this.router.navigate(["/"]);
+    this.router.navigate(["/users/tabs/home"]);
   }
 }

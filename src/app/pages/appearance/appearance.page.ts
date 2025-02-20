@@ -1,4 +1,4 @@
-import { Component, effect } from "@angular/core";
+import { Component, effect, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import {
   IonHeader,
@@ -9,16 +9,16 @@ import {
   IonList,
   IonContent,
   IonItem,
-  IonToggle,
-} from "@ionic/angular/standalone";
+  IonToggle, IonButton } from "@ionic/angular/standalone";
 import { AppearanceService } from "src/app/services/appearance/appearance.service";
+import { AuthService } from "src/app/services/auth/auth.service";
 
 @Component({
   selector: "app-appearance",
   templateUrl: "./appearance.page.html",
   styleUrls: ["./appearance.page.scss"],
   standalone: true,
-  imports: [
+  imports: [IonButton,
     FormsModule,
     IonToggle,
     IonItem,
@@ -32,9 +32,12 @@ import { AppearanceService } from "src/app/services/appearance/appearance.servic
   ],
 })
 export class AppearancePage {
+  authService = inject(AuthService);
+  appearance = inject(AppearanceService);
+
   paletteToggle = false;
 
-  constructor(private appearance: AppearanceService) {
+  constructor() {
     effect(() => {
       this.paletteToggle = this.appearance.$paletteToggle();
     });

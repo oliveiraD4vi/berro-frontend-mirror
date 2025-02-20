@@ -7,6 +7,8 @@ import {
 } from "@ionic/angular/standalone";
 import { addIcons } from "ionicons";
 import { triangle, ellipse, square } from "ionicons/icons";
+import { AuthService } from "src/app/services/auth/auth.service";
+import { Roles } from "src/app/utils/constants";
 
 @Component({
   selector: "app-tabs",
@@ -15,9 +17,20 @@ import { triangle, ellipse, square } from "ionicons/icons";
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon],
 })
 export class TabsPage {
+  roles = Roles;
+  userRole: string = Roles.ALUMN;
+
   public environmentInjector = inject(EnvironmentInjector);
 
-  constructor() {
+  constructor(
+    private authService: AuthService
+  ) {
     addIcons({ triangle, ellipse, square });
+
+    this.authService.user$.subscribe((data) => {
+      if (data?.role) {
+        this.userRole = data?.role;
+      }
+    });
   }
 }

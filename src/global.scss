@@ -111,12 +111,20 @@ ion-card-header {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 0 1.25rem;
   position: relative;
 
-  & > ion-img.logo {
-    height: 120px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 992px;
+    position: relative;
     align-self: center;
+    padding: 0 1.25rem;
+
+    & > ion-img.logo {
+      height: 120px;
+      align-self: center;
+    }
   }
 }
 

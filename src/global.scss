@@ -114,9 +114,10 @@ ion-card-header {
   position: relative;
 
   .content {
+    width: 100%;
+    max-width: 992px;
     display: flex;
     flex-direction: column;
-    max-width: 992px;
     position: relative;
     align-self: center;
     padding: 0 1.25rem;

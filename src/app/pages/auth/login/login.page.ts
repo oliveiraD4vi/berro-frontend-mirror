@@ -24,6 +24,7 @@ import {
   IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
 import { Roles, UTILS } from "src/app/utils/constants";
 import { RouterLink } from "@angular/router";
+import { PhrasesComponent } from "../../../components/phrases/phrases.component";
 
 @Component({
   selector: "app-login",
@@ -47,8 +48,7 @@ import { RouterLink } from "@angular/router";
     FormsModule,
     ReactiveFormsModule,
     IonInputPasswordToggle,
-    RouterLink
-  ],
+    RouterLink, PhrasesComponent],
 })
 export class LoginPage {
   fb = inject(FormBuilder);

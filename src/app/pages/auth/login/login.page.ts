@@ -22,7 +22,7 @@ import {
   IonList,
   IonItem,
   IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
-import { Roles } from "src/app/utils/constants";
+import { Roles, UTILS } from "src/app/utils/constants";
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -67,6 +67,7 @@ export class LoginPage {
     e.preventDefault();
 
     if (this.loginForm.invalid) {
+      UTILS.validateGenericForm(this.loginForm);
       return;
     }
 

@@ -45,7 +45,7 @@ export class AuthService {
     this.storage.removeItem(StorageKeys.CART);
     this.setUser(null);
     URL.SET_TENANT(null);
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/auth/login"]);
   }
 
   saveData(data: User) {

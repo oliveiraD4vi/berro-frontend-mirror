@@ -1,7 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar></ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" [scrollY]="false">
-  <div class="page-container"></div>
+  <div class="page-container">
+    <ion-img
+      class="logo"
+      src="../../../../assets/logo/logo.svg"
+      alt="LOGO"
+    ></ion-img>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Recuperar senha</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <p>
+    <ion-text>Mensagem aleatória...</ion-text>
+  </p>
+</ion-footer>
+
+<div class="b-circle primary-background"></div>

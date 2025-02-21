@@ -79,9 +79,27 @@ ion-button {
   --border-radius: 5rem;
 }
 
+ion-card {
+  border-radius: .5rem;
+}
+
 ion-footer {
   box-shadow: none !important;
   padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: .75rem;
+  }
+}
+
+ion-card-title,
+ion-card-subtitle,
+ion-card-header {
+  display: grid;
+  place-content: center;
 }
 
 .header-ios ion-toolbar:last-of-type {
@@ -115,4 +133,10 @@ ion-footer {
     transform: translate(-50%, -50%);
     z-index: 1;
   }
+}
+
+.f-centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

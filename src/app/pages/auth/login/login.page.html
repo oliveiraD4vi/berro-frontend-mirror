@@ -8,6 +8,82 @@
 
 <ion-content [fullscreen]="true" [scrollY]="false">
   <div class="page-container login">
-    <ion-img class="logo" src="../../../../assets/logo/logo.svg" alt="LOGO"></ion-img>
+    <ion-img
+      class="logo"
+      src="../../../../assets/logo/logo.svg"
+      alt="LOGO"
+    ></ion-img>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bem vindo!</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form
+          [formGroup]="loginForm"
+          (submit)="onSubmit($event)"
+          class="login-form"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-input
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+                autofocus
+              >
+                <ion-icon
+                  inert="true"
+                  ios="mail-outline"
+                  md="mail-outline"
+                  size="medium"
+                  slot="start"
+                ></ion-icon>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input
+                type="password"
+                placeholder="Senha"
+              >
+                <ion-icon
+                  inert="true"
+                  ios="key-outline"
+                  md="key-outline"
+                  size="medium"
+                  slot="start"
+                ></ion-icon>
+
+                <ion-input-password-toggle
+                  slot="end"
+                ></ion-input-password-toggle>
+              </ion-input>
+            </ion-item>
+          </ion-list>
+
+          <a fill="clear" [routerLink]="['/auth/recover']" class="forgot-password">
+            Esqueci minha senha
+          </a>
+
+          <div class="submit-button f-centralize">
+            <ion-button type="submit">Entrar</ion-button>
+
+            <p>
+              Não possui uma conta? <ion-text color="primary">Fale com seu administrador</ion-text>
+            </p>
+          </div>
+        </form>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
+
+<ion-footer>
+  <p>
+    <ion-text>Mensagem aleatória...</ion-text>
+  </p>
+</ion-footer>
+
+<div class="b-circle primary-background"></div>

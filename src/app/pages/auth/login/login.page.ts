@@ -1,33 +1,61 @@
 import { AuthService } from "src/app/services/auth/auth.service";
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormBuilder, FormGroup, FormsModule, Validators } from "@angular/forms";
 import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from "@angular/forms";
+import {
+  IonInputPasswordToggle,
   IonContent,
   IonHeader,
-  IonToolbar, IonImg, IonButtons, IonBackButton } from "@ionic/angular/standalone";
+  IonToolbar,
+  IonImg,
+  IonButtons,
+  IonBackButton,
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonList,
+  IonItem,
+  IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
 import { Roles } from "src/app/utils/constants";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.page.html",
   styleUrls: ["./login.page.scss"],
   standalone: true,
-  imports: [
-    IonBackButton, IonButtons, IonImg,
+  imports: [IonCardTitle, IonCardHeader, IonText, IonFooter, IonIcon,
+    IonInput,
+    IonItem,
+    IonList,
+    IonCardContent,
+    IonCard,
+    IonButton,
+    IonBackButton,
+    IonButtons,
+    IonImg,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
+    IonInputPasswordToggle,
+    RouterLink
   ],
 })
 export class LoginPage {
   fb = inject(FormBuilder);
 
   loginForm: FormGroup = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    email: ["", [Validators.required, Validators.email]],
+    password: ["", Validators.required],
     rememberPassword: [false],
   });
 

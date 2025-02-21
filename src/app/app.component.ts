@@ -21,6 +21,8 @@ import {
   sunny,
   sunnyOutline,
   walletOutline,
+  mailOutline,
+  keyOutline
 } from "ionicons/icons";
 import { AppearanceService } from "./services/appearance/appearance.service";
 
@@ -52,7 +54,9 @@ export class AppComponent {
       attachOutline,
       documentAttachOutline,
       eyeOutline,
-      eyeOffOutline
+      eyeOffOutline,
+      mailOutline,
+      keyOutline
     });
   }
 }

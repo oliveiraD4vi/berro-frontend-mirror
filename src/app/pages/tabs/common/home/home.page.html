@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="md">
+    <ion-title>Olá, {{ auth.name }}!</ion-title>
+
+    <ion-buttons slot="end">
+      <app-balance-visibility></app-balance-visibility>
+
+      <app-appearance-button></app-appearance-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="page-container">
+    <div class="content"></div>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-button shape="round" fill="clear" (click)="toggleVisibility()">
+  @if (isVisible) {
+    <ion-icon
+      slot="icon-only"
+      inert="true"
+      ios="eye-outline"
+      md="eye-outline"
+      size="small"
+    ></ion-icon>
+  } @else {
+    <ion-icon
+      slot="icon-only"
+      inert="true"
+      ios="eye-off-outline"
+      md="eye-off-outline"
+      size="small"
+    ></ion-icon>
+  }
+</ion-button>

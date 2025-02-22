@@ -1,0 +1,5 @@
+{
+  "lint-staged": {
+    "*.{ts,scss,html}": ["eslint --fix", "prettier --write"]
+  }
+}

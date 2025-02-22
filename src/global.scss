@@ -32,6 +32,120 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import "@ionic/angular/css/palettes/dark.always.css";
+@import "@ionic/angular/css/palettes/dark.class.css";
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+// CUSTOM STYLES FOR IONIC
+ion-tab-button {
+  flex: none !important;
+  min-width: 56px !important;
+}
+
+ion-header {
+  box-shadow: none !important;
+}
+
+// -- DEPRECATED
+// ion-tab-bar {
+//   box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.1);
+//   margin: 1rem;
+//   margin-top: 0;
+//   background: none !important;
+//   --background: none !important;
+//   border-radius: 3rem;
+
+//   @media (max-width: 400px) {
+//     border-radius: 0;
+//     margin: 0;
+//     box-shadow: none;
+//   }
+// }
+// -- DEPRECATED
+
+ion-item {
+  --transition: none;
+}
+
+ion-back-button > button.button-native > span.button-inner {
+  & > span.button-text {
+    display: none !important;
+  }
+}
+
+ion-button {
+  margin: 0 !important;
+  text-transform: none;
+  --border-radius: 5rem;
+}
+
+ion-card {
+  border-radius: .5rem;
+}
+
+ion-footer {
+  box-shadow: none !important;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+ion-card-title,
+ion-card-subtitle,
+ion-card-header {
+  display: grid;
+  place-content: center;
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0 !important;
+}
+// CUSTOM STYLES FOR IONIC
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+
+  .content {
+    width: 100%;
+    max-width: 992px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: center;
+    padding: 0 1.25rem;
+
+    & > ion-img.logo {
+      height: 120px;
+      align-self: center;
+    }
+  }
+}
+
+.primary-background {
+  background-color: var(--ion-custom-background);
+
+  &.b-circle {
+    position: absolute;
+    width: 150%;
+    height: 30%;
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+.f-centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

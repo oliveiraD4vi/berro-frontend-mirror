@@ -1,0 +1,18 @@
+.custom-phrase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: center;
+  padding: .5rem 3rem;
+
+  p {
+    margin: 0;
+    font-style: italic;
+
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}

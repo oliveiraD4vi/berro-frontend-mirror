@@ -12,6 +12,12 @@
 
 <ion-content [fullscreen]="true">
   <div class="page-container">
-    <div class="content"></div>
+    <div class="content">
+      @if (auth.role === auth.roles.ALUMN) {
+        <app-balance-card></app-balance-card>
+      } @else {
+        <span>ADMIN or GUSER</span>
+      }
+    </div>
   </div>
 </ion-content>

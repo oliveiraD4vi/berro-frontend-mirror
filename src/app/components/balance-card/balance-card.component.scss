@@ -7,10 +7,22 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: .25rem;
+    gap: .5rem;
+    font-weight: bold;
+    color: var(--ion-color-medium-tint);
 
     & > p.value {
       margin: 0;
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+
+      & > div.dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--ion-color-medium-tint);
+      }
     }
   }
 }

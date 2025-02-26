@@ -1,6 +1,14 @@
 <div class="balance-card-container">
   <div class="value-container">
-    <p>$</p>
-    <p class="value">{{ balance }}</p>
+    <p class="value">
+      @if (isVisible) {
+        {{ balance | currency: '$ ' }}
+      } @else {
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      }
+    </p>
   </div>
 </div>

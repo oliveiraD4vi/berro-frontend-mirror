@@ -9,6 +9,7 @@ import {
 import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
 import { BalanceVisibilityComponent } from "../../../../components/balance-visibility/balance-visibility.component";
 import { AuthService } from "src/app/services/auth/auth.service";
+import { BalanceCardComponent } from "../../../../components/balance-card/balance-card.component";
 
 @Component({
   selector: "app-home",
@@ -21,7 +22,8 @@ import { AuthService } from "src/app/services/auth/auth.service";
     IonContent,
     AppearanceButtonComponent,
     IonButtons,
-    BalanceVisibilityComponent
+    BalanceVisibilityComponent,
+    BalanceCardComponent
 ],
 })
 export class HomePage {

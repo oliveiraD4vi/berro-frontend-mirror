@@ -1,6 +1,7 @@
+import { StateService } from './../../services/state/state.service';
 import { IonButton } from '@ionic/angular/standalone';
 import { IonIcon } from '@ionic/angular/standalone';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-balance-visibility',
@@ -9,11 +10,17 @@ import { Component } from '@angular/core';
   imports: [IonIcon, IonButton]
 })
 export class BalanceVisibilityComponent {
+  state = inject(StateService);
+
   isVisible: boolean = false;
 
-  constructor() {}
+  constructor() {
+    this.state.showBalance$.subscribe((show: boolean) => {
+      this.isVisible = show;
+    });
+  }
 
   toggleVisibility() {
-    this.isVisible = !this.isVisible;
+    this.state.setShowBalance(!this.isVisible);
   }
 }

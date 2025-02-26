@@ -1,7 +1,7 @@
 <ion-tabs mode="md">
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" href="/tabs/home">
-      @if (userRole === roles.ALUMN) {
+      @if (userRole === authService.roles.ALUMN) {
         <ion-icon
           inert="true"
           ios="wallet-outline"
@@ -28,7 +28,7 @@
     </ion-tab-button>
 
     <!-- STUDENT ONLY -->
-    @if (userRole === roles.ALUMN) {
+    @if (userRole === authService.roles.ALUMN) {
       <!-- <ion-tab-button tab="balance" href="/tabs/balance">
           <ion-icon
             inert="true"
@@ -50,7 +50,7 @@
     <!-- STUDENT ONLY -->
 
     <!-- ADMIN AND GUSER -->
-    @if (userRole === roles.ADMIN || userRole === roles.GUSER) {
+    @if (userRole === authService.roles.ADMIN || userRole === authService.roles.GUSER) {
       <ion-tab-button tab="logs" href="/tabs/logs">
         <ion-icon
           inert="true"
@@ -72,7 +72,7 @@
     <!-- ADMIN AND GUSER -->
 
     <!-- GUSER ONLY -->
-    @if (userRole === roles.GUSER) {
+    @if (userRole === authService.roles.GUSER) {
       <ion-tab-button tab="users" href="/tabs/users">
         <ion-icon
           inert="true"

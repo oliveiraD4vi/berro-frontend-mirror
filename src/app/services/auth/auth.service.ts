@@ -10,6 +10,7 @@ import { User } from '../../@types/auth/auth';
 })
 export class AuthService {
   isLogged: boolean = false;
+  roles = Roles;
   role: string = Roles.ALUMN;
   name: string = '';
 

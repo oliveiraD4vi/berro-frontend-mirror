@@ -22,7 +22,7 @@ import {
   IonList,
   IonItem,
   IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
-import { Roles, UTILS } from "src/app/utils/constants";
+import { UTILS } from "src/app/utils/constants";
 import { RouterLink } from "@angular/router";
 import { PhrasesComponent } from "../../../components/phrases/phrases.component";
 
@@ -52,6 +52,7 @@ import { PhrasesComponent } from "../../../components/phrases/phrases.component"
 })
 export class LoginPage {
   fb = inject(FormBuilder);
+  authService = inject(AuthService);
 
   loginForm: FormGroup = this.fb.group({
     email: ["", [Validators.required, Validators.email]],
@@ -59,9 +60,7 @@ export class LoginPage {
     rememberPassword: [false],
   });
 
-  roles = Roles;
-
-  constructor(private authService: AuthService) {}
+  constructor() {}
 
   onSubmit(e: Event) {
     e.preventDefault();
@@ -71,7 +70,7 @@ export class LoginPage {
       return;
     }
 
-    this.login(this.roles.ALUMN);
+    this.login(this.authService.roles.ALUMN);
   }
 
   login(role: string) {
@@ -81,6 +80,7 @@ export class LoginPage {
       email: "",
       token: "",
       tenant: "IFCE-TAUA",
+      balance: 0,
       role,
     });
   }

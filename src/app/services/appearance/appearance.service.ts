@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { LocalStorageService } from '../storage/local-storage.service';
-import { StorageKeys, Theme } from 'src/app/utils/constants';
+// import { StorageKeys, Theme } from 'src/app/utils/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -10,45 +10,45 @@ export class AppearanceService {
 
   constructor(private storage: LocalStorageService) {}
 
-  public initTheme() {
-    const theme = this.storage.getItem(StorageKeys.THEME);
+  // public initTheme() {
+  //   const theme = this.storage.getItem(StorageKeys.THEME);
 
-    if (!theme) {
-      this.checkSystemPreference();
-    } else {
-      this.initializeDarkPalette(theme === Theme.DARK);
-    }
-  }
+  //   if (!theme) {
+  //     this.checkSystemPreference();
+  //   } else {
+  //     this.initializeDarkPalette(theme === Theme.DARK);
+  //   }
+  // }
 
-  private checkSystemPreference() {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+  // private checkSystemPreference() {
+  //   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-    this.initializeDarkPalette(prefersDark.matches);
+  //   this.initializeDarkPalette(prefersDark.matches);
 
-    if (prefersDark.matches) {
-      this.storage.setItem(StorageKeys.THEME, Theme.DARK);
-    } else {
-      this.storage.setItem(StorageKeys.THEME, Theme.LIGHT);
-    }
-  }
+  //   if (prefersDark.matches) {
+  //     this.storage.setItem(StorageKeys.THEME, Theme.DARK);
+  //   } else {
+  //     this.storage.setItem(StorageKeys.THEME, Theme.LIGHT);
+  //   }
+  // }
 
-  private initializeDarkPalette(isDark: boolean) {
-    this.$paletteToggle.set(isDark);
-    this.toggleDarkPalette(isDark);
-  }
+  // private initializeDarkPalette(isDark: boolean) {
+  //   this.$paletteToggle.set(isDark);
+  //   this.toggleDarkPalette(isDark);
+  // }
 
-  public toggleChange(event: CustomEvent) {
-    this.toggleDarkPalette(event.detail.checked);
+  // public toggleChange(event: CustomEvent) {
+  //   this.toggleDarkPalette(event.detail.checked);
 
-    if (this.$paletteToggle()) {
-      this.storage.setItem(StorageKeys.THEME, Theme.DARK);
-    } else {
-      this.storage.setItem(StorageKeys.THEME, Theme.LIGHT);
-    }
-  }
+  //   if (this.$paletteToggle()) {
+  //     this.storage.setItem(StorageKeys.THEME, Theme.DARK);
+  //   } else {
+  //     this.storage.setItem(StorageKeys.THEME, Theme.LIGHT);
+  //   }
+  // }
 
-  private toggleDarkPalette(shouldAdd: boolean) {
-    this.$paletteToggle.set(shouldAdd);
-    document.documentElement.classList.toggle("ion-palette-dark", shouldAdd);
-  }
+  // private toggleDarkPalette(shouldAdd: boolean) {
+  //   this.$paletteToggle.set(shouldAdd);
+  //   document.documentElement.classList.toggle("ion-palette-dark", shouldAdd);
+  // }
 }

@@ -24,7 +24,6 @@ import {
   mailOutline,
   keyOutline
 } from "ionicons/icons";
-import { AppearanceService } from "./services/appearance/appearance.service";
 
 @Component({
   selector: "app-root",
@@ -32,9 +31,7 @@ import { AppearanceService } from "./services/appearance/appearance.service";
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor(private appearance: AppearanceService) {
-    // this.appearance.initTheme();
-
+  constructor() {
     addIcons({
       personCircle,
       personCircleOutline,

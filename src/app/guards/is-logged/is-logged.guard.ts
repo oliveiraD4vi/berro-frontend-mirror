@@ -1,6 +1,6 @@
-import { inject } from '@angular/core';
-import { CanActivateFn, Router } from '@angular/router';
-import { AuthService } from '../../services/auth/auth.service';
+import { inject } from "@angular/core";
+import { CanActivateFn, Router } from "@angular/router";
+import { AuthService } from "../../services/auth/auth.service";
 
 export const isLoggedGuard: CanActivateFn = () => {
   const authService = inject(AuthService);
@@ -9,7 +9,7 @@ export const isLoggedGuard: CanActivateFn = () => {
   const isLogged: boolean = authService.isLogged;
 
   if (isLogged) {
-    router.navigate(['/users/tabs/home']);
+    router.navigate(["/users/tabs/home"]);
     return false;
   }
 

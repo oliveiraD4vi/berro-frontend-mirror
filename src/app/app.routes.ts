@@ -25,8 +25,19 @@ export const routes: Routes = [
     canActivate: [isNotLoggedGuard, deviceGuard],
   },
   {
-    path: 'welcome',
-    loadComponent: () => import('./pages/landing-page/landing-page.page').then( m => m.LandingPagePage),
+    path: "notifications",
+    loadComponent: () =>
+      import("./pages/notifications/notifications.page").then(
+        (m) => m.NotificationsPage
+      ),
+    canActivate: [isNotLoggedGuard, deviceGuard],
+  },
+  {
+    path: "welcome",
+    loadComponent: () =>
+      import("./pages/landing-page/landing-page.page").then(
+        (m) => m.LandingPagePage
+      ),
     canActivate: [deviceGuard],
   },
   {

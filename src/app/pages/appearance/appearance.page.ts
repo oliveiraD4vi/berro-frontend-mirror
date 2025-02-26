@@ -8,7 +8,7 @@ import {
   IonTitle,
   IonList,
   IonContent,
-  IonButton
+  IonButton,
 } from "@ionic/angular/standalone";
 import { AuthService } from "src/app/services/auth/auth.service";
 
@@ -17,7 +17,8 @@ import { AuthService } from "src/app/services/auth/auth.service";
   templateUrl: "./appearance.page.html",
   styleUrls: ["./appearance.page.scss"],
   standalone: true,
-  imports: [IonButton,
+  imports: [
+    IonButton,
     FormsModule,
     IonContent,
     IonList,

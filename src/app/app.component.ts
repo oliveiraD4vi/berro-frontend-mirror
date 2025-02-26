@@ -22,7 +22,8 @@ import {
   sunnyOutline,
   walletOutline,
   mailOutline,
-  keyOutline
+  keyOutline,
+  notificationsOutline,
 } from "ionicons/icons";
 
 @Component({
@@ -53,7 +54,8 @@ export class AppComponent {
       eyeOutline,
       eyeOffOutline,
       mailOutline,
-      keyOutline
+      keyOutline,
+      notificationsOutline,
     });
   }
 }

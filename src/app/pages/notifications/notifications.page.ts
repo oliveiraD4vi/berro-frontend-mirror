@@ -6,14 +6,18 @@ import {
   IonHeader,
   IonTitle,
   IonToolbar,
+  IonBackButton,
+  IonButtons,
 } from "@ionic/angular/standalone";
 
 @Component({
-  selector: "app-landing-page",
-  templateUrl: "./landing-page.page.html",
-  styleUrls: ["./landing-page.page.scss"],
+  selector: "app-notifications",
+  templateUrl: "./notifications.page.html",
+  styleUrls: ["./notifications.page.scss"],
   standalone: true,
   imports: [
+    IonButtons,
+    IonBackButton,
     IonContent,
     IonHeader,
     IonTitle,
@@ -22,7 +26,7 @@ import {
     FormsModule,
   ],
 })
-export class LandingPagePage implements OnInit {
+export class NotificationsPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}

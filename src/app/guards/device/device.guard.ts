@@ -1,6 +1,6 @@
-import { inject } from '@angular/core';
-import { CanActivateFn, Router } from '@angular/router';
-import { Platform } from '@ionic/angular';
+import { inject } from "@angular/core";
+import { CanActivateFn, Router } from "@angular/router";
+import { Platform } from "@ionic/angular";
 
 export const deviceGuard: CanActivateFn = (route, state) => {
   const platform = inject(Platform);
@@ -10,12 +10,12 @@ export const deviceGuard: CanActivateFn = (route, state) => {
   const path: string = state.url;
 
   if (path.includes("welcome") && isMobileDevice) {
-    router.navigate(['/']);
+    router.navigate(["/"]);
     return false;
   }
 
   if (!path.includes("welcome") && !isMobileDevice) {
-    router.navigate(['/welcome']);
+    router.navigate(["/welcome"]);
     return false;
   }
 

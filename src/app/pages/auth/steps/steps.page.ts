@@ -5,7 +5,11 @@ import {
   IonContent,
   IonHeader,
   IonToolbar,
-  IonImg, IonFooter, IonButton, IonText } from "@ionic/angular/standalone";
+  IonImg,
+  IonFooter,
+  IonButton,
+  IonText,
+} from "@ionic/angular/standalone";
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -14,14 +18,16 @@ import { RouterLink } from "@angular/router";
   styleUrls: ["./steps.page.scss"],
   standalone: true,
   imports: [
-    IonText, IonButton, IonFooter,
+    IonText,
+    IonButton,
+    IonFooter,
     IonImg,
     IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,
     FormsModule,
-    RouterLink
+    RouterLink,
   ],
 })
 export class StepsPage {

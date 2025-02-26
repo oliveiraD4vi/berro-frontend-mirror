@@ -1,18 +1,18 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { LocalStorageService } from '../storage/local-storage.service';
-import { Router } from '@angular/router';
-import { Roles, StorageKeys, URL } from 'src/app/utils/constants';
-import { User } from '../../@types/auth/auth';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
+import { LocalStorageService } from "../storage/local-storage.service";
+import { Router } from "@angular/router";
+import { Roles, StorageKeys, URL } from "src/app/utils/constants";
+import { User } from "../../@types/auth/auth";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
   isLogged: boolean = false;
   roles = Roles;
   role: string = Roles.ALUMN;
-  name: string = '';
+  name: string = "";
 
   // STARTS USER DATA
   private userSubject: BehaviorSubject<User | null> =

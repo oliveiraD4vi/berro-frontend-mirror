@@ -21,31 +21,31 @@ export const routes: Routes = [
         path: "cart",
         loadComponent: () =>
           import("./student/cart/cart.page").then((m) => m.CartPage),
-        canActivate: [roleGuard]
+        canActivate: [roleGuard],
       },
       {
         path: "products",
         loadComponent: () =>
           import("./admin/products/products.page").then((m) => m.ProductsPage),
-        canActivate: [roleGuard]
+        canActivate: [roleGuard],
       },
       {
         path: "logs",
         loadComponent: () =>
           import("./admin/logs/logs.page").then((m) => m.LogsPage),
-        canActivate: [roleGuard]
+        canActivate: [roleGuard],
       },
       {
         path: "requests",
         loadComponent: () =>
           import("./admin/requests/requests.page").then((m) => m.RequestsPage),
-        canActivate: [roleGuard]
+        canActivate: [roleGuard],
       },
       {
         path: "users",
         loadComponent: () =>
           import("./guser/users/users.page").then((m) => m.UsersPage),
-        canActivate: [roleGuard]
+        canActivate: [roleGuard],
       },
       {
         path: "",

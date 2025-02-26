@@ -21,7 +21,13 @@ import {
   IonCardContent,
   IonList,
   IonItem,
-  IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
+  IonInput,
+  IonIcon,
+  IonFooter,
+  IonText,
+  IonCardHeader,
+  IonCardTitle,
+} from "@ionic/angular/standalone";
 import { UTILS } from "src/app/utils/constants";
 import { RouterLink } from "@angular/router";
 import { PhrasesComponent } from "../../../components/phrases/phrases.component";
@@ -31,7 +37,12 @@ import { PhrasesComponent } from "../../../components/phrases/phrases.component"
   templateUrl: "./login.page.html",
   styleUrls: ["./login.page.scss"],
   standalone: true,
-  imports: [IonCardTitle, IonCardHeader, IonText, IonFooter, IonIcon,
+  imports: [
+    IonCardTitle,
+    IonCardHeader,
+    IonText,
+    IonFooter,
+    IonIcon,
     IonInput,
     IonItem,
     IonList,
@@ -48,7 +59,9 @@ import { PhrasesComponent } from "../../../components/phrases/phrases.component"
     FormsModule,
     ReactiveFormsModule,
     IonInputPasswordToggle,
-    RouterLink, PhrasesComponent],
+    RouterLink,
+    PhrasesComponent,
+  ],
 })
 export class LoginPage {
   fb = inject(FormBuilder);

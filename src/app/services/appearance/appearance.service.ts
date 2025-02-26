@@ -1,9 +1,9 @@
-import { Injectable, signal } from '@angular/core';
-import { LocalStorageService } from '../storage/local-storage.service';
+import { Injectable, signal } from "@angular/core";
+import { LocalStorageService } from "../storage/local-storage.service";
 // import { StorageKeys, Theme } from 'src/app/utils/constants';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AppearanceService {
   $paletteToggle = signal<boolean>(false);

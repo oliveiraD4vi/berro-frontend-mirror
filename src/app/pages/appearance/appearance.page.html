@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar mode="md">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <div class="appearance-container">
     <div class="configurations">
       <!-- <ion-list [inset]="true">
@@ -51,12 +51,11 @@
     </div>
 
     @if (authService.isLogged) {
-      <ion-list class="logout" [inset]="true">
-        <ion-button expand="full" color="danger" (click)="authService.logout()">
-          Sair
-        </ion-button>
-      </ion-list>
+    <ion-list class="logout" [inset]="true">
+      <ion-button expand="full" color="danger" (click)="authService.logout()">
+        Sair
+      </ion-button>
+    </ion-list>
     }
   </div>
-
 </ion-content>

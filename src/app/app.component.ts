@@ -22,9 +22,13 @@ import {
   sunnyOutline,
   walletOutline,
   mailOutline,
-  keyOutline
+  keyOutline,
+  notificationsOutline,
+  addCircleOutline,
+  addOutline,
+  mailUnreadOutline,
+  chevronForwardOutline,
 } from "ionicons/icons";
-import { AppearanceService } from "./services/appearance/appearance.service";
 
 @Component({
   selector: "app-root",
@@ -32,9 +36,7 @@ import { AppearanceService } from "./services/appearance/appearance.service";
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor(private appearance: AppearanceService) {
-    // this.appearance.initTheme();
-
+  constructor() {
     addIcons({
       personCircle,
       personCircleOutline,
@@ -56,7 +58,12 @@ export class AppComponent {
       eyeOutline,
       eyeOffOutline,
       mailOutline,
-      keyOutline
+      mailUnreadOutline,
+      keyOutline,
+      notificationsOutline,
+      addCircleOutline,
+      addOutline,
+      chevronForwardOutline
     });
   }
 }

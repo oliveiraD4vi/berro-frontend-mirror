@@ -1,8 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class StateService {
-  constructor() {}
+  // STARTS SHOW BALANCE
+  private showBalanceSubject: BehaviorSubject<boolean> =
+    new BehaviorSubject<boolean>(false);
+  showBalance$ = this.showBalanceSubject.asObservable();
+
+  setShowBalance(show: boolean) {
+    this.showBalanceSubject.next(show);
+  }
+  // END SHOW BALANCE
 }

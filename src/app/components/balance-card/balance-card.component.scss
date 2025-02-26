@@ -1,16 +1,35 @@
 .balance-card-container {
-  display: block;
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 
-  & > div.value-container {
-    width: 100%;
+  div.value-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: .25rem;
+    justify-content: space-between;
 
     & > p.value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--ion-color-medium-tint);
       margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      min-height: 1.5rem;
+
+      & > div.dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--ion-color-medium-tint);
+      }
     }
+  }
+
+  div.actions {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
   }
 }

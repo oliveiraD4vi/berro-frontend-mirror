@@ -10,6 +10,7 @@ export type User = {
   token: string;
   tenant: string;
   role: string;
+  balance: number;
 };
 
 export type UserRegister = {

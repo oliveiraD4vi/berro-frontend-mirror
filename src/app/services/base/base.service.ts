@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Inject, Injectable, REQUEST } from '@angular/core';
-import { map, Observable } from 'rxjs';
-import { StorageKeys, URL } from 'src/app/utils/constants';
-import { LocalStorageService } from '../storage/local-storage.service';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Inject, Injectable, REQUEST } from "@angular/core";
+import { map, Observable } from "rxjs";
+import { StorageKeys, URL } from "src/app/utils/constants";
+import { LocalStorageService } from "../storage/local-storage.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class BaseService {
   constructor(
@@ -25,7 +25,7 @@ export class BaseService {
     if (!token) {
       return {
         headers: new HttpHeaders().set("x-tenant-id", URL.TENANT()),
-      }
+      };
     }
 
     return {
@@ -33,7 +33,7 @@ export class BaseService {
         .set("Authorization", `Bearer ${token}`)
         .set("Content-Type", "application/json;charset=UTF-8")
         .set("x-tenant-id", URL.TENANT()),
-    }
+    };
   }
 
   public get(endpoint: string, options?: object): Observable<any> {

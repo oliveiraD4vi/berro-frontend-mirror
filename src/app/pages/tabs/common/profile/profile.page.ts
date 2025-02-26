@@ -9,6 +9,8 @@ import {
   IonButtons,
 } from "@ionic/angular/standalone";
 import { AppearanceButtonComponent } from "src/app/components/appearance-button/appearance-button.component";
+import { NotificationButtonComponent } from "../../../../components/notification-button/notification-button.component";
+import { BalanceVisibilityComponent } from "../../../../components/balance-visibility/balance-visibility.component";
 
 @Component({
   selector: "app-profile",
@@ -24,6 +26,8 @@ import { AppearanceButtonComponent } from "src/app/components/appearance-button/
     CommonModule,
     FormsModule,
     AppearanceButtonComponent,
+    NotificationButtonComponent,
+    BalanceVisibilityComponent,
   ],
 })
 export class ProfilePage implements OnInit {

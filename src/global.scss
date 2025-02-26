@@ -76,16 +76,18 @@ ion-back-button > button.button-native > span.button-inner {
 ion-button {
   margin: 0 !important;
   text-transform: none;
+  border-radius: 5rem;
   --border-radius: 5rem;
 }
 
 ion-card {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+  margin: 0;
 }
 
 ion-footer {
   box-shadow: none !important;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

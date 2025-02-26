@@ -21,8 +21,14 @@ import {
   IonCardContent,
   IonList,
   IonItem,
-  IonInput, IonIcon, IonFooter, IonText, IonCardHeader, IonCardTitle } from "@ionic/angular/standalone";
-import { Roles, UTILS } from "src/app/utils/constants";
+  IonInput,
+  IonIcon,
+  IonFooter,
+  IonText,
+  IonCardHeader,
+  IonCardTitle,
+} from "@ionic/angular/standalone";
+import { UTILS } from "src/app/utils/constants";
 import { RouterLink } from "@angular/router";
 import { PhrasesComponent } from "../../../components/phrases/phrases.component";
 
@@ -31,7 +37,12 @@ import { PhrasesComponent } from "../../../components/phrases/phrases.component"
   templateUrl: "./login.page.html",
   styleUrls: ["./login.page.scss"],
   standalone: true,
-  imports: [IonCardTitle, IonCardHeader, IonText, IonFooter, IonIcon,
+  imports: [
+    IonCardTitle,
+    IonCardHeader,
+    IonText,
+    IonFooter,
+    IonIcon,
     IonInput,
     IonItem,
     IonList,
@@ -48,10 +59,13 @@ import { PhrasesComponent } from "../../../components/phrases/phrases.component"
     FormsModule,
     ReactiveFormsModule,
     IonInputPasswordToggle,
-    RouterLink, PhrasesComponent],
+    RouterLink,
+    PhrasesComponent,
+  ],
 })
 export class LoginPage {
   fb = inject(FormBuilder);
+  authService = inject(AuthService);
 
   loginForm: FormGroup = this.fb.group({
     email: ["", [Validators.required, Validators.email]],
@@ -59,9 +73,7 @@ export class LoginPage {
     rememberPassword: [false],
   });
 
-  roles = Roles;
-
-  constructor(private authService: AuthService) {}
+  constructor() {}
 
   onSubmit(e: Event) {
     e.preventDefault();
@@ -71,7 +83,7 @@ export class LoginPage {
       return;
     }
 
-    this.login(this.roles.ALUMN);
+    this.login(this.authService.roles.ALUMN);
   }
 
   login(role: string) {
@@ -81,6 +93,7 @@ export class LoginPage {
       email: "",
       token: "",
       tenant: "IFCE-TAUA",
+      balance: 10,
       role,
     });
   }

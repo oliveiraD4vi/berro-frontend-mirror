@@ -7,7 +7,7 @@ export const unauthorizedInterceptor: HttpInterceptorFn = (req, next) => {
   const auth = inject(AuthService);
 
   return next(req).pipe(
-    catchError(err => {
+    catchError((err) => {
       if ([401, 403].includes(err.status)) {
         auth.logout();
       }

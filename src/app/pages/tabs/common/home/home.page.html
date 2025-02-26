@@ -5,6 +5,8 @@
     <ion-buttons slot="end">
       <app-balance-visibility></app-balance-visibility>
 
+      <app-notification-button></app-notification-button>
+
       <app-appearance-button></app-appearance-button>
     </ion-buttons>
   </ion-toolbar>
@@ -12,6 +14,12 @@
 
 <ion-content [fullscreen]="true">
   <div class="page-container">
-    <div class="content"></div>
+    <div class="content">
+      @if (auth.role === auth.roles.ALUMN) {
+      <app-balance-card></app-balance-card>
+      } @else {
+      <span>ADMIN or GUSER</span>
+      }
+    </div>
   </div>
 </ion-content>

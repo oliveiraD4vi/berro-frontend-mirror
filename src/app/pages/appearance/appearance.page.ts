@@ -1,4 +1,4 @@
-import { Component, effect, inject } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import {
   IonHeader,
@@ -8,11 +8,8 @@ import {
   IonTitle,
   IonList,
   IonContent,
-  // IonItem,
-  // IonToggle,
-  IonButton
+  IonButton,
 } from "@ionic/angular/standalone";
-import { AppearanceService } from "src/app/services/appearance/appearance.service";
 import { AuthService } from "src/app/services/auth/auth.service";
 
 @Component({
@@ -20,10 +17,9 @@ import { AuthService } from "src/app/services/auth/auth.service";
   templateUrl: "./appearance.page.html",
   styleUrls: ["./appearance.page.scss"],
   standalone: true,
-  imports: [IonButton,
+  imports: [
+    IonButton,
     FormsModule,
-    // IonToggle,
-    // IonItem,
     IonContent,
     IonList,
     IonTitle,
@@ -35,17 +31,4 @@ import { AuthService } from "src/app/services/auth/auth.service";
 })
 export class AppearancePage {
   authService = inject(AuthService);
-  appearance = inject(AppearanceService);
-
-  paletteToggle = false;
-
-  constructor() {
-    effect(() => {
-      this.paletteToggle = this.appearance.$paletteToggle();
-    });
-  }
-
-  toggleChange(event: CustomEvent) {
-    this.appearance.toggleChange(event);
-  }
 }

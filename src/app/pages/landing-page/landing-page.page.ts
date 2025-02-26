@@ -1,35 +1,29 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import {
   IonContent,
   IonHeader,
+  IonTitle,
   IonToolbar,
-  IonImg,
-  IonFooter,
-  IonButton,
-  IonText,
 } from "@ionic/angular/standalone";
-import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: "app-steps",
-  templateUrl: "./steps.page.html",
-  styleUrls: ["./steps.page.scss"],
+  selector: "app-landing-page",
+  templateUrl: "./landing-page.page.html",
+  styleUrls: ["./landing-page.page.scss"],
   standalone: true,
   imports: [
-    IonText,
-    IonButton,
-    IonFooter,
-    IonImg,
     IonContent,
     IonHeader,
+    IonTitle,
     IonToolbar,
     CommonModule,
     FormsModule,
-    RouterLink,
   ],
 })
-export class StepsPage {
+export class LandingPagePage implements OnInit {
   constructor() {}
+
+  ngOnInit() {}
 }

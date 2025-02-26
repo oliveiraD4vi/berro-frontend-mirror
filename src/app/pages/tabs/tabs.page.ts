@@ -8,7 +8,6 @@ import {
 import { addIcons } from "ionicons";
 import { triangle, ellipse, square } from "ionicons/icons";
 import { AuthService } from "src/app/services/auth/auth.service";
-import { Roles } from "src/app/utils/constants";
 
 @Component({
   selector: "app-tabs",
@@ -17,14 +16,12 @@ import { Roles } from "src/app/utils/constants";
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon],
 })
 export class TabsPage {
-  roles = Roles;
-  userRole: string = Roles.ALUMN;
+  authService = inject(AuthService);
+  userRole: string = this.authService.roles.ALUMN;
 
   public environmentInjector = inject(EnvironmentInjector);
 
-  constructor(
-    private authService: AuthService
-  ) {
+  constructor() {
     addIcons({ triangle, ellipse, square });
 
     this.authService.user$.subscribe((data) => {

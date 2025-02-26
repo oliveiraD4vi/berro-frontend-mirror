@@ -1,20 +1,20 @@
 <ion-tabs mode="md">
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" href="/tabs/home">
-      @if (userRole === roles.ALUMN) {
-        <ion-icon
-          inert="true"
-          ios="wallet-outline"
-          md="wallet-outline"
-          size="medium"
-        ></ion-icon>
+      @if (userRole === authService.roles.ALUMN) {
+      <ion-icon
+        inert="true"
+        ios="wallet-outline"
+        md="wallet-outline"
+        size="medium"
+      ></ion-icon>
       } @else {
-        <ion-icon
-          inert="true"
-          ios="home-outline"
-          md="home-outline"
-          size="medium"
-        ></ion-icon>
+      <ion-icon
+        inert="true"
+        ios="home-outline"
+        md="home-outline"
+        size="medium"
+      ></ion-icon>
       }
     </ion-tab-button>
 
@@ -28,8 +28,8 @@
     </ion-tab-button>
 
     <!-- STUDENT ONLY -->
-    @if (userRole === roles.ALUMN) {
-      <!-- <ion-tab-button tab="balance" href="/tabs/balance">
+    @if (userRole === authService.roles.ALUMN) {
+    <!-- <ion-tab-button tab="balance" href="/tabs/balance">
           <ion-icon
             inert="true"
             ios="wallet-outline"
@@ -38,49 +38,50 @@
           ></ion-icon>
         </ion-tab-button> -->
 
-      <ion-tab-button tab="cart" href="/tabs/cart">
-        <ion-icon
-          inert="true"
-          ios="cart-outline"
-          md="cart-outline"
-          size="medium"
-        ></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button tab="cart" href="/tabs/cart">
+      <ion-icon
+        inert="true"
+        ios="cart-outline"
+        md="cart-outline"
+        size="medium"
+      ></ion-icon>
+    </ion-tab-button>
     }
     <!-- STUDENT ONLY -->
 
     <!-- ADMIN AND GUSER -->
-    @if (userRole === roles.ADMIN || userRole === roles.GUSER) {
-      <ion-tab-button tab="logs" href="/tabs/logs">
-        <ion-icon
-          inert="true"
-          ios="document-text-outline"
-          md="document-text-outline"
-          size="medium"
-        ></ion-icon>
-      </ion-tab-button>
+    @if (userRole === authService.roles.ADMIN || userRole ===
+    authService.roles.GUSER) {
+    <ion-tab-button tab="logs" href="/tabs/logs">
+      <ion-icon
+        inert="true"
+        ios="document-text-outline"
+        md="document-text-outline"
+        size="medium"
+      ></ion-icon>
+    </ion-tab-button>
 
-      <ion-tab-button tab="products" href="/tabs/products">
-        <ion-icon
-          inert="true"
-          ios="pricetag-outline"
-          md="pricetag-outline"
-          size="medium"
-        ></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button tab="products" href="/tabs/products">
+      <ion-icon
+        inert="true"
+        ios="pricetag-outline"
+        md="pricetag-outline"
+        size="medium"
+      ></ion-icon>
+    </ion-tab-button>
     }
     <!-- ADMIN AND GUSER -->
 
     <!-- GUSER ONLY -->
-    @if (userRole === roles.GUSER) {
-      <ion-tab-button tab="users" href="/tabs/users">
-        <ion-icon
-          inert="true"
-          ios="people-outline"
-          md="people-outline"
-          size="medium"
-        ></ion-icon>
-      </ion-tab-button>
+    @if (userRole === authService.roles.GUSER) {
+    <ion-tab-button tab="users" href="/tabs/users">
+      <ion-icon
+        inert="true"
+        ios="people-outline"
+        md="people-outline"
+        size="medium"
+      ></ion-icon>
+    </ion-tab-button>
     }
     <!-- GUSER ONLY -->
 

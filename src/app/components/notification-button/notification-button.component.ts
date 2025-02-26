@@ -8,4 +8,6 @@ import { RouterLink } from "@angular/router";
   styleUrls: ["./notification-button.component.scss"],
   imports: [IonButton, IonIcon, RouterLink],
 })
-export class NotificationButtonComponent {}
+export class NotificationButtonComponent {
+  notifications = [];
+}

@@ -24,6 +24,10 @@ import {
   mailOutline,
   keyOutline,
   notificationsOutline,
+  addCircleOutline,
+  addOutline,
+  mailUnreadOutline,
+  chevronForwardOutline,
 } from "ionicons/icons";
 
 @Component({
@@ -54,8 +58,12 @@ export class AppComponent {
       eyeOutline,
       eyeOffOutline,
       mailOutline,
+      mailUnreadOutline,
       keyOutline,
       notificationsOutline,
+      addCircleOutline,
+      addOutline,
+      chevronForwardOutline
     });
   }
 }

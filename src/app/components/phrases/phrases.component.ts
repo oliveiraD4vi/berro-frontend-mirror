@@ -55,11 +55,6 @@ export class PhrasesComponent {
     },
     {
       phrase:
-        "Deus, para a felicidade do homem, inventou a fé e o amor. O Diabo, invejoso, fez o homem confundir fé com religião e amor com casamento.",
-      author: "Machado de Assis",
-    },
-    {
-      phrase:
         "Precisar de dominar os outros é precisar dos outros. O chefe é um dependente.",
       author: "Fernando Pessoa",
     },

@@ -1,14 +1,41 @@
-<div class="balance-card-container">
-  <div class="value-container">
-    <p class="value">
-      @if (isVisible) {
-        {{ balance | currency: "B " }}
-      } @else {
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      }
-    </p>
-  </div>
-</div>
+<ion-card>
+  <ion-card-content class="balance-card-container">
+    <div class="value-container">
+      <p class="value">
+        @if (isVisible) {
+          {{ balance | currency: "B " }}
+        } @else {
+          <span>B</span>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        }
+      </p>
+    </div>
+
+    <div class="actions">
+      <ion-button shape="round" color="secondary" size="small" [routerLink]="['/users/tabs/requests']">
+        <ion-icon
+          inert="true"
+          slot="end"
+          ios="add-outline"
+          md="add-outline"
+        ></ion-icon>
+
+        Solicitar
+      </ion-button>
+
+      <ion-button shape="round" color="secondary" size="small" [routerLink]="['/users/tabs/cart']">
+        <ion-icon
+          inert="true"
+          slot="end"
+          ios="chevron-forward-outline"
+          md="chevron-forward-outline"
+        ></ion-icon>
+
+        Comprar
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

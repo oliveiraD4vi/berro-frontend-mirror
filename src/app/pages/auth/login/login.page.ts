@@ -93,7 +93,7 @@ export class LoginPage {
       email: "",
       token: "",
       tenant: "IFCE-TAUA",
-      balance: 0,
+      balance: 10,
       role,
     });
   }

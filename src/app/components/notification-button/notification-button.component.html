@@ -1,9 +1,19 @@
 <ion-button shape="round" fill="clear" [routerLink]="['/notifications']">
-  <ion-icon
-    inert="true"
-    slot="icon-only"
-    ios="notifications-outline"
-    md="notifications-outline"
-    size="small"
-  ></ion-icon>
+  @if (notifications.length) {
+    <ion-icon
+      inert="true"
+      slot="icon-only"
+      ios="mail-unread-outline"
+      md="mail-unread-outline"
+      size="small"
+    ></ion-icon>
+  } @else {
+    <ion-icon
+      inert="true"
+      slot="icon-only"
+      ios="mail-outline"
+      md="mail-outline"
+      size="small"
+    ></ion-icon>
+  }
 </ion-button>

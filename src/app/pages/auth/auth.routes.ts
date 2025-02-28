@@ -23,14 +23,14 @@ export const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "/a/steps",
+        redirectTo: "/s/a/steps",
         pathMatch: "full",
       },
     ],
   },
   {
     path: "",
-    redirectTo: "/a/steps",
+    redirectTo: "/s/a/steps",
     pathMatch: "full",
   },
 ];

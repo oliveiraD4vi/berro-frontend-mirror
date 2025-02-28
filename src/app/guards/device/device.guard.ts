@@ -10,8 +10,9 @@ export const deviceGuard: CanActivateFn = (route, state) => {
   const path: string = state.url;
 
   // It blocks users using mobile devices to see the landing page
+  // Uncomment it when building for IOS and Android
   // if (path.includes("welcome") && isMobileDevice) {
-  //   router.navigate(["/"]);
+  //   router.navigate(["/s/a/steps"]);
   //   return false;
   // }
 

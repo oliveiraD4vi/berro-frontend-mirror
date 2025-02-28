@@ -6,6 +6,11 @@ import { deviceGuard } from "./guards/device/device.guard";
 export const routes: Routes = [
   {
     path: "",
+    redirectTo: "/welcome",
+    pathMatch: "full",
+  },
+  {
+    path: "s",
     loadChildren: () =>
       import("./pages/auth/auth.routes").then((m) => m.routes),
     canActivate: [isLoggedGuard, deviceGuard],

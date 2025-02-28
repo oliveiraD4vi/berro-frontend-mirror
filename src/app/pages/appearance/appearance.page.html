@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <div class="appearance-container">
     <div class="configurations">
-      <!-- <ion-list [inset]="true">
+      <!-- <ion-list mode="md" [inset]="true">
         <ion-item>
           <ion-toggle
             [(ngModel)]="paletteToggle"
@@ -22,7 +22,7 @@
         </ion-item>
       </ion-list> -->
 
-      <!-- <ion-list [inset]="true">
+      <!-- <ion-list mode="md" [inset]="true">
         <ion-item [button]="true">Text Size</ion-item>
         <ion-item>
           <ion-toggle justify="space-between">Bold Text</ion-toggle>
@@ -30,7 +30,7 @@
       </ion-list>
 
       <ion-list-header>Brightness</ion-list-header>
-      <ion-list [inset]="true">
+      <ion-list mode="md" [inset]="true">
         <ion-item>
           <ion-range value="40">
             <ion-icon name="sunny-outline" slot="start"></ion-icon>
@@ -42,17 +42,17 @@
         </ion-item>
       </ion-list>
 
-      <ion-list [inset]="true">
+      <ion-list mode="md" [inset]="true">
         <ion-item [button]="true">
           <ion-label>Night Shift</ion-label>
-          <ion-text slot="end" color="medium">9:00 PM to 8:00 AM</ion-text>
+          <ion-text mode="md" slot="end" color="medium">9:00 PM to 8:00 AM</ion-text>
         </ion-item>
       </ion-list> -->
     </div>
 
     @if (authService.isLogged) {
-    <ion-list class="logout" [inset]="true">
-      <ion-button expand="full" color="danger" (click)="authService.logout()">
+    <ion-list mode="md" class="logout" [inset]="true">
+      <ion-button mode="md" expand="full" color="danger" (click)="authService.logout()">
         Sair
       </ion-button>
     </ion-list>

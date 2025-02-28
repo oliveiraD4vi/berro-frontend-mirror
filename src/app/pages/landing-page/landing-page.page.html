@@ -1,6 +1,25 @@
 <ion-header mode="md" [translucent]="true" collapse="fade">
   <ion-toolbar>
     <ion-title>Berro</ion-title>
+
+    @if (platform.is("mobile")) {
+      <ion-buttons slot="end">
+        <ion-button mode="md" shape="round" [routerLink]="['/a/login']">
+          @if (auth.isLogged) {
+            Ir para conta
+          } @else {
+            Entrar
+          }
+  
+          <ion-icon
+            inert="true"
+            ios="log-in-outline"
+            md="log-in-outline"
+            size="small"
+          ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    }
   </ion-toolbar>
 </ion-header>
 

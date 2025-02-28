@@ -4,17 +4,17 @@ import { AuthService } from "../../services/auth/auth.service";
 import { Roles } from "src/app/utils/constants";
 
 const allowedRoutes = {
-  [Roles.ALUMN]: ["/users/tabs/cart", "/users/tabs/requests"],
+  [Roles.ALUMN]: ["/u/t/cart", "/u/t/requests"],
   [Roles.ADMIN]: [
-    "/users/tabs/products",
-    "/users/tabs/logs",
-    "/users/tabs/requests",
+    "/u/t/products",
+    "/u/t/logs",
+    "/u/t/requests",
   ],
   [Roles.GUSER]: [
-    "/users/tabs/products",
-    "/users/tabs/logs",
-    "/users/tabs/requests",
-    "/users/tabs/users",
+    "/u/t/products",
+    "/u/t/logs",
+    "/u/t/requests",
+    "/u/t/users",
   ],
 };
 

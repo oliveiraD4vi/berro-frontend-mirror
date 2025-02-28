@@ -9,7 +9,7 @@ export const isLoggedGuard: CanActivateFn = () => {
   const isLogged: boolean = authService.isLogged;
 
   if (isLogged) {
-    router.navigate(["/users/tabs/home"]);
+    router.navigate(["/u/t/home"]);
     return false;
   }
 

@@ -11,7 +11,7 @@ export const routes: Routes = [
     canActivate: [isLoggedGuard, deviceGuard],
   },
   {
-    path: "users",
+    path: "u",
     loadChildren: () =>
       import("./pages/tabs/tabs.routes").then((m) => m.routes),
     canActivate: [isNotLoggedGuard, deviceGuard],

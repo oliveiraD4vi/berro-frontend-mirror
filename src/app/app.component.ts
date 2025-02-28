@@ -28,6 +28,7 @@ import {
   addOutline,
   mailUnreadOutline,
   chevronForwardOutline,
+  logInOutline,
 } from "ionicons/icons";
 
 @Component({
@@ -63,7 +64,8 @@ export class AppComponent {
       notificationsOutline,
       addCircleOutline,
       addOutline,
-      chevronForwardOutline
+      chevronForwardOutline,
+      logInOutline
     });
   }
 }

@@ -46,7 +46,7 @@ export class AuthService {
     this.storage.removeItem(StorageKeys.CART);
     this.setUser(null);
     URL.SET_TENANT(null);
-    this.router.navigate(["/auth/login"]);
+    this.router.navigate(["/a/login"]);
   }
 
   saveData(data: User) {
@@ -56,6 +56,6 @@ export class AuthService {
     this.storage.setItem(StorageKeys.TOKEN, token);
     this.setUser(data);
     URL.SET_TENANT(data.tenant);
-    this.router.navigate(["/users/tabs/home"]);
+    this.router.navigate(["/u/t/home"]);
   }
 }

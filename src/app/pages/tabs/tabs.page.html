@@ -1,6 +1,6 @@
 <ion-tabs mode="md">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" href="/tabs/home">
+    <ion-tab-button tab="home" href="/t/home">
       @if (userRole === authService.roles.ALUMN) {
       <ion-icon
         inert="true"
@@ -18,7 +18,7 @@
       }
     </ion-tab-button>
 
-    <ion-tab-button tab="requests" href="/tabs/requests">
+    <ion-tab-button tab="requests" href="/t/requests">
       <ion-icon
         inert="true"
         ios="document-attach-outline"
@@ -29,7 +29,7 @@
 
     <!-- STUDENT ONLY -->
     @if (userRole === authService.roles.ALUMN) {
-    <!-- <ion-tab-button tab="balance" href="/tabs/balance">
+    <!-- <ion-tab-button tab="balance" href="/t/balance">
           <ion-icon
             inert="true"
             ios="wallet-outline"
@@ -38,7 +38,7 @@
           ></ion-icon>
         </ion-tab-button> -->
 
-    <ion-tab-button tab="cart" href="/tabs/cart">
+    <ion-tab-button tab="cart" href="/t/cart">
       <ion-icon
         inert="true"
         ios="cart-outline"
@@ -52,7 +52,7 @@
     <!-- ADMIN AND GUSER -->
     @if (userRole === authService.roles.ADMIN || userRole ===
     authService.roles.GUSER) {
-    <ion-tab-button tab="logs" href="/tabs/logs">
+    <ion-tab-button tab="logs" href="/t/logs">
       <ion-icon
         inert="true"
         ios="document-text-outline"
@@ -61,7 +61,7 @@
       ></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="products" href="/tabs/products">
+    <ion-tab-button tab="products" href="/t/products">
       <ion-icon
         inert="true"
         ios="pricetag-outline"
@@ -74,7 +74,7 @@
 
     <!-- GUSER ONLY -->
     @if (userRole === authService.roles.GUSER) {
-    <ion-tab-button tab="users" href="/tabs/users">
+    <ion-tab-button tab="users" href="/t/users">
       <ion-icon
         inert="true"
         ios="people-outline"
@@ -85,7 +85,7 @@
     }
     <!-- GUSER ONLY -->
 
-    <ion-tab-button tab="profile" href="/tabs/profile">
+    <ion-tab-button tab="profile" href="/t/profile">
       <ion-icon
         inert="true"
         ios="person-circle-outline"

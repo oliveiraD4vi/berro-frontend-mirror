@@ -3,7 +3,7 @@ import { AuthPage } from "./auth.page";
 
 export const routes: Routes = [
   {
-    path: "auth",
+    path: "a",
     component: AuthPage,
     children: [
       {
@@ -23,14 +23,14 @@ export const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "/auth/steps",
+        redirectTo: "/a/steps",
         pathMatch: "full",
       },
     ],
   },
   {
     path: "",
-    redirectTo: "/auth/steps",
+    redirectTo: "/a/steps",
     pathMatch: "full",
   },
 ];

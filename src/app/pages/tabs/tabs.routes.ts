@@ -4,7 +4,7 @@ import { roleGuard } from "src/app/guards/roles/roles.guard";
 
 export const routes: Routes = [
   {
-    path: "tabs",
+    path: "t",
     component: TabsPage,
     children: [
       {
@@ -49,14 +49,14 @@ export const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "/tabs/home",
+        redirectTo: "/t/home",
         pathMatch: "full",
       },
     ],
   },
   {
     path: "",
-    redirectTo: "/tabs/home",
+    redirectTo: "/t/home",
     pathMatch: "full",
   },
 ];

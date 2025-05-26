@@ -67,11 +67,19 @@ export class LoginPage {
   fb = inject(FormBuilder);
   authService = inject(AuthService);
 
+  defaultPasswordError: string = 'Senha inválida!';
+  passwordError: string = this.defaultPasswordError;
+
   loginForm: FormGroup = this.fb.group({
     email: ["", [Validators.required, Validators.email]],
-    password: ["", Validators.required],
-    rememberPassword: [false],
+    password: ["", Validators.required]
   });
+
+  enabledLogin: { [key: string]: string } = {
+    "user@alumn.com": this.authService.roles.ALUMN,
+    "user@admin.com": this.authService.roles.ADMIN,
+    "user@guser.com": this.authService.roles.GUSER
+  };
 
   constructor() {}
 
@@ -83,10 +91,17 @@ export class LoginPage {
       return;
     }
 
-    this.login(this.authService.roles.ALUMN);
+    const email: string = this.loginForm.value.email;
+
+    this.login(this.enabledLogin[email]);
   }
 
   login(role: string) {
+    if (!role) {
+      // TO-DO
+      return;
+    }
+
     this.authService.saveData({
       id: 1,
       name: "Davi",

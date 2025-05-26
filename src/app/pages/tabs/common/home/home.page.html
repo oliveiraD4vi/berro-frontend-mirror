@@ -18,7 +18,7 @@
       @if (auth.role === auth.roles.ALUMN) {
       <app-balance-card></app-balance-card>
       } @else {
-      <span>ADMIN or GUSER</span>
+      <span>{{ auth.role }}</span>
       }
     </div>
   </div>
